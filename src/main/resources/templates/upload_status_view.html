@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Upload progress page</title>
+    </head>
+
+    <body style="background-color: lightpink">
+
+        <h2><pre> Upload progress page!</pre></h2>
+
+        <div th:if="${fileIsEmpty}">
+            <pre><h3><span th:text="${fileIsEmpty}" ></span></h3></pre>
+            <pre><big>      ↓</big></pre>
+        </div>
+
+        <div th:if="${successful}">
+            <pre><h3><span th:text="${successful}" ></span></h3></pre>
+        </div>
+
+        <div>
+            <span><a href="/upload"><h3><pre>Upload more file</pre></h3></a></span>
+        </div>
+    </body>
+
+</html>
