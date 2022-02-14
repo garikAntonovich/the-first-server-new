@@ -1,6 +1,6 @@
 package by.iharantanovich.thefirstservernew.model;
 
-public enum DocumentType {
+public enum TypeOfDocument {
     MAIN,
     SUPPLEMENTARY
 }
