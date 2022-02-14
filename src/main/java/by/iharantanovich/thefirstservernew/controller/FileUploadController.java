@@ -46,7 +46,7 @@ public class FileUploadController {
             model.addAttribute("successful", "Successfully uploaded file: " + multipartFile.getOriginalFilename() + "!");
             List<File> files = extractingFilesService.extractFiles(multipartFile);
             Map<TypeOfDocument, File> documentTypeFileMap = fileTypeIdentificationService.identityFileType(files);
-            groupingByTypeService.group(documentTypeFileMap);
+            groupingByTypeService.groupByType(documentTypeFileMap);
         }
         return "upload_status_view";
     }

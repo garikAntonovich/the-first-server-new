@@ -13,7 +13,7 @@ import java.util.Map;
 public class GroupingByTypeServiceImpl implements GroupingByTypeService {
 
     @Override
-    public List<File> group(Map<TypeOfDocument, File> documentTypeFileMap) {
+    public List<File> groupByType(Map<TypeOfDocument, File> documentTypeFileMap) {
 
         List<File> files = new ArrayList<>();
 

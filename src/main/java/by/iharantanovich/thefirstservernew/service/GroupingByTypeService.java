@@ -8,5 +8,5 @@ import java.util.Map;
 
 public interface GroupingByTypeService {
 
-    List<File> group(Map<TypeOfDocument, File> documentTypeFileMap);
+    List<File> groupByType(Map<TypeOfDocument, File> documentTypeFileMap);
 }
