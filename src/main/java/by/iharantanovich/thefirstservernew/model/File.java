@@ -28,8 +28,6 @@ public class File {
 
     @Override
     public String toString() {
-        return "File: " +
-                "name: '" + name + '\'' +
-                ", data: '" + data + '\'';
+        return name + ", data:\n" + data;
     }
 }
