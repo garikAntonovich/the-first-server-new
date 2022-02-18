@@ -1,6 +1,5 @@
 package by.iharantanovich.thefirstservernew.controller;
 
-import by.iharantanovich.thefirstservernew.model.TypeOfDocument;
 import by.iharantanovich.thefirstservernew.model.File;
 import by.iharantanovich.thefirstservernew.service.ExtractingFilesService;
 import by.iharantanovich.thefirstservernew.service.FileTypeIdentificationService;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
-import java.util.Map;
 
 @Controller
 public class FileUploadController {
@@ -45,8 +43,6 @@ public class FileUploadController {
         } else {
             model.addAttribute("successful", "Successfully uploaded file: " + multipartFile.getOriginalFilename() + "!");
             List<File> files = extractingFilesService.extractFiles(multipartFile);
-            Map<TypeOfDocument, File> documentTypeFileMap = fileTypeIdentificationService.identityFileType(files);
-            groupingByTypeService.groupByType(documentTypeFileMap);
         }
         return "upload_status_view";
     }
